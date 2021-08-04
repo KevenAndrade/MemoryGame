@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da memória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Jogo da memória <span></h1>
+    </header>
+    <main>
+        <section>
+            <div class="game-status-details">
+                <div class="rating">
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                    <span class="star">🌟</span>
+                </div>
+                <span class="move-counter" id="moveCounter"></span>
+                <span class="timer" id="timer">0 mins 0 secs</span>
+                <button class="restart-btn" id="restartBtn" onClick="startGame()" aria-label="restart game">↻</button>
+            </div>
+            <table class="game-board">
+                <tbody class="game-grid">
+                    <tr class="game-grid-row" >
+                        <td class="game-card" style="background-image: url('img/n1.png');background-size: cover;">
+                            <img class="game-card-img" src="img/1.png" alt="cvtelecom">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n2.png');background-size: cover;">
+                            <img class="game-card-img" src="img/2.png" alt="tubaroes">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n3.png');background-size: cover;">
+                            <img class="game-card-img" src="img/3.png" alt="app">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n4.png');background-size: cover;">
+                            <img class="game-card-img" src="img/4.png" alt="recargas">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n5.png');background-size: cover;">
+                            <img class="game-card-img" src="img/5.png" alt="zap">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n6.png');background-size: cover;">
+                            <img class="game-card-img" src="img/6.png" alt="4g">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card" style="background-image: url('img/n7.png');background-size: cover;">
+                            <img class="game-card-img" src="img/7.png" alt="dkelbom">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n8.png');background-size: cover;">
+                            <img class="game-card-img" src="img/8.png" alt="internacional">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n9.png');background-size: cover;">
+                            <img class="game-card-img" src="img/9.png" alt="gpowa">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n10.png');background-size: cover;">
+                            <img class="game-card-img" src="img/10.png" alt="powas">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n11.png');background-size: cover;">
+                            <img class="game-card-img" src="img/11.png" alt="cvmultimedia">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n12.png');background-size: cover;">
+                            <img class="game-card-img" src="img/12.png" alt="cvmovel">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card" style="background-image: url('img/n13.png');background-size: cover;">
+                            <img class="game-card-img" src="img/7.png" alt="dkelbom">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n14.png');background-size: cover;">
+                            <img class="game-card-img" src="img/8.png" alt="internacional">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n15.png');background-size: cover;">
+                            <img class="game-card-img" src="img/9.png" alt="gpowa">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n16.png');background-size: cover;">
+                            <img class="game-card-img" src="img/10.png" alt="powas">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n17.png');background-size: cover;">
+                            <img class="game-card-img" src="img/11.png" alt="cvmultimedia">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n18.png');background-size: cover;">
+                            <img class="game-card-img" src="img/12.png" alt="cvmovel">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card" style="background-image: url('img/n19.png');background-size: cover;">
+                            <img class="game-card-img" src="img/1.png" alt="cvtelecom">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n20.png');background-size: cover;">
+                            <img class="game-card-img" src="img/2.png" alt="tubaroes">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n21.png');background-size: cover;">
+                            <img class="game-card-img" src="img/3.png" alt="app">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n22.png');background-size: cover;">
+                            <img class="game-card-img" src="img/4.png" alt="recargas">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n23.png');background-size: cover;">
+                            <img class="game-card-img" src="img/5.png" alt="zap">
+                        </td>
+                        <td class="game-card" style="background-image: url('img/n24.png');background-size: cover;">
+                            <img class="game-card-img" src="img/6.png" alt="4g">
+                        </td>
+                    </tr>
+                </tbody>               
+            </table>
+            <!-- <div class="restart-button-div">
+                <button class="restart-button brown-button" id="restartButton" onClick="startGame()">Restart ↻</button>
+            </div> -->
+        </section>
+        
+        <!--Modal on game over -->
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <span aria-label="close" role="button" class="close" id="closeModal">&times;</span>
+                <div class="modal-header">
+                    <h2>Game Over</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <p>Congratulations! <span class="game-over-icons">🎊 🎊 🎊</span> You successfully completed the game. <span class="game-over-icons" style="animation-delay: 0.2s">🎉 🎉 🎉</span></p>
+                        <p>You completed the game using <span id="totalGameMoves"></span> moves
+                            <br>in <span id="totalGameTime"></span>
+                        </p>
+                        <p>Your rating is: <span id="finalStarRating"></span></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="brown-button" onClick="playAgain()">Play Again &nbsp;😀</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="page-footer">
+           <!--  <p>Made with
+                <span aria-label="love" style="color:#D81B60;">❤</span> by
+                <a href="https://adamichelle.github.io" class="page-footer-link">Aniuchi Adaobi</a>
+                <span aria-label="copyright">&COPY;</span> 2019.
+            </p> -->
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <noscript>Oops!!! Sorry, you cannot play this game. Your broswer does not support Javascript.</noscript>
+</body>
+</html>
