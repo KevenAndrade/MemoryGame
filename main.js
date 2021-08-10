@@ -129,7 +129,7 @@ function matched() {
     matchedCards.push(openedCards[1]);
     openedCards = [];
     if(matchedCards.length == 24) {
-        endGame();
+       // endGame();
     }
 }
 
