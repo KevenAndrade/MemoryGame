@@ -145,7 +145,7 @@ function unmatched() {
         enable();
         openedCards = [];
         
-    }, 1100)
+    }, 3000)
 }
 
 function disable() {
